@@ -8,7 +8,7 @@ function App() {
     <div className="App">
      <Header/>
      <Button
-     text="Entrar"
+      text="Entrar"
      />
     </div>
   );
