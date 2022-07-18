@@ -16,7 +16,7 @@ const Button = ({text}: Props) => {
 
   const [ativo, setAtivo] = useState(true)
   const [dados, setDados] = useState({nome:'Silas', idade:'38'})
-  const [modal, setModal] = useState(true)
+  const [modal, setModal] = useState(false)
   const [items, setItems] = useState(['item 1', 'item 2']) 
 
   function handleClick(){
