@@ -1,0 +1,18 @@
+
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.301);
+}
+
+.login:after{
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 17px;
+  background: url('../../Assets//usuario.svg') no-repeat center center;
+  margin-left: 0.5rem;
+}
