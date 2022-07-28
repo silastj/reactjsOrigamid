@@ -1,0 +1,16 @@
+.inputCenter{
+  display: flex;
+  flex-direction: column;
+}
+
+.input{
+  height: 24px;
+  border-radius: 4px;
+  width: 150px;
+  border: 1px solid;
+  margin: 5px 0;
+}
+
+.erro{
+  color:red;
+}
