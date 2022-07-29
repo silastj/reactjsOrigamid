@@ -4,7 +4,7 @@ const Button = ({ children, ...props }) => {
   return (
     <>
       <button className={styles.button} {...props} >{children}</button>
-      <p className={styles.erro}>Erro</p>
+      {/* {error && <p className={styles.erro}>Erro</p> } */}
     </>
   )
 
