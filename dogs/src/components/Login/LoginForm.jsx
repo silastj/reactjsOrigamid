@@ -11,7 +11,7 @@ const LoginForm = () => {
   const username = useForm();
   const password = useForm();
 
-  const {userLogin}= useContext(UserContext);
+  const {userLogin, error, login, loading}= useContext(UserContext);
 
   async function handleSubmit(event){
     event.preventDefault();
@@ -27,15 +27,22 @@ const LoginForm = () => {
           type="text"
           name="username"
           label="Nome"
+          placeholder="dog"
           {...username}
-        />
+          />
         <Input
           type="password"
           name="password"
           label="Senha"
+          placeholder="dog"
           {...password}          
         />
-        <Button onClick={handleSubmit}>Entrar</Button>
+        {loading ? 
+          <Button onClick={handleSubmit}>Carregando ...</Button>
+          :
+          <Button onClick={handleSubmit}>Entrar</Button>
+        }
+        {error && <p>Error - {error}</p>}
       </form>
       <Link to="/login/criar">Cadastro</Link>
     </section>

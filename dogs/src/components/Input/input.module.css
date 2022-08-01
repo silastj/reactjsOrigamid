@@ -3,6 +3,10 @@
   flex-direction: column;
 }
 
+.inputCenter>label{
+  text-transform: uppercase;
+}
+
 .input{
   height: 24px;
   border-radius: 4px;
@@ -13,4 +17,8 @@
 
 .erro{
   color:red;
+}
+
+form>div{
+  margin-bottom: 20px;
 }
