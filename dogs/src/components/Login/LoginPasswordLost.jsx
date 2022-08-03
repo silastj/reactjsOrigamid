@@ -3,7 +3,7 @@ import React from 'react'
 const LoginPasswordLost = () => {
   return(
     <section>
-      <p>LoginPasswordLost</p>
+      <p className='title'>LoginPasswordLost</p>
     </section>
   )
 }

@@ -3,7 +3,7 @@ import React from 'react'
 const LoginPasswordReset = () => {
   return(
     <section>
-      <p>LoginPasswordReset</p>
+      <p className='title'>LoginPasswordReset</p>
     </section>
   )
 }

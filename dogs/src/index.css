@@ -39,3 +39,56 @@ ul,li,a{
     transform: initial;
   }
 }
+
+.loginCreate{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.title{
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 20px 0 ;
+}
+
+.home{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: 1200px;
+  margin:0 auto;
+  grid-gap: 30px;
+  height: 100%;
+}
+
+.homeImagem{
+  background: url('./Assets/login.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.homeCenter{
+  height: 100vh;
+}
+
+.form{
+  border-bottom: 1px solid;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+
+@media (max-width:768px){
+  .home{
+    grid-template-columns: 1fr;
+  }
+
+  .homeImagem{
+    display: none;
+  }
+
+  .homeData{
+    padding: 20px 10px;
+  }
+}
