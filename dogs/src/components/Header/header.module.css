@@ -16,3 +16,9 @@
   background: url('../../Assets//usuario.svg') no-repeat center center;
   margin-left: 0.5rem;
 }
+
+.nav>a:last-child{
+  display: flex;
+  align-items: center;
+  gap:10px;
+}

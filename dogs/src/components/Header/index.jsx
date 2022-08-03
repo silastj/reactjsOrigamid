@@ -22,7 +22,7 @@ const Header = () => {
             to='/conta'
             className={styles.login}
             >{data.nome}
-          <button onClick={userLogout}>Sair</button>
+          <button onClick={userLogout} className="sair">Sair</button>
           </Link>
         ): (
           <Link
