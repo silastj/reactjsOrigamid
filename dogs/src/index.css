@@ -42,9 +42,10 @@ ul,li,a{
 
 .loginCreate{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: 50px 0;
+  flex-direction: column;
 }
 
 .title{
