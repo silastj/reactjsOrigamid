@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Login from './components/Login';
 import LoginConta from './components/Account/LoginConta';
 import { UserStorage } from './UserContext';
+import ProtectRoute from './ProtectRoute';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/login/*' element={<Login/>}/>
-            <Route path='/conta/*' element={<LoginConta/>}/>
+            <Route path='/conta/*' element={<ProtectRoute><LoginConta/></ProtectRoute>}/>
           </Routes> 
           <Footer/>
         </UserStorage>
