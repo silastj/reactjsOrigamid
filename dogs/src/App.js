@@ -3,7 +3,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Home from './components/Home';
 import Login from './components/Login';
-import LoginConta from './components/Account/LoginConta';
+import LoginConta from './components/User/Account/LoginConta';
 import { UserStorage } from './UserContext';
 import ProtectRoute from './ProtectRoute';
 
