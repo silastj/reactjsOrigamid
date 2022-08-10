@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Input from '../Input';
 import Button from '../Button'
 import useForm from '../../Hooks/useForm';
@@ -56,11 +56,12 @@ const LoginCreate = () => {
           label="Senha"
           {...password}
            />
-           {loading & loading ?(
+           {loading & loading ?
+            (
              <Button>Cadastrando...</Button>
-           ):(
-             <Button>Cadastre-se</Button>
-           ) 
+            ):(
+              <Button>Cadastre-se</Button>
+            ) 
            }
            {error &&
             <Error error={error} />
