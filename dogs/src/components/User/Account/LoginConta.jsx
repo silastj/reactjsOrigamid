@@ -1,16 +1,24 @@
-import styles from './account.module.css'
-import React ,{ useContext }from 'react'
-import { UserContext } from '../../../UserContext';
+import styles from "./account.module.css";
+import React, { useContext } from "react";
+import { UserContext } from "../../../UserContext";
 
 const LoginConta = () => {
-  const{ data } = useContext(UserContext)
-  return(
+  console.log("UserContext ", useContext(UserContext));
+  const { data } = useContext(UserContext);
+  return (
     <div className={styles.account}>
-      {data && 
-        <h2>Está Logado o <span>{data.nome}</span></h2>
-      }
+      {data && (
+        <div className={styles.acoountContainer}>
+          <h2>
+            Logado com a conta: <span>{data.nome}</span>
+          </h2>
+          <h3>
+            Seu email: <span>{data.email}</span>
+          </h3>
+        </div>
+      )}
     </div>
-  )
-}
+  );
+};
 
 export default LoginConta;

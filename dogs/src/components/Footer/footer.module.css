@@ -1,9 +1,13 @@
-.footer{
- color:blue;
- margin:0 auto;
- width: 100%;
- max-width: 1200px;
- display: flex;
- justify-content: center;
- align-items: center;
+.footer {
+  margin: 0 auto;
+  margin-top: 30%;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px 0;
+  text-transform: uppercase;
+  color: #ccc;
 }
