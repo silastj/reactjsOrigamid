@@ -2,10 +2,21 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { TOKEN_POST, TOKEN_VALIDATE_POST, USER_GET } from './components/service/api';
 import { useNavigate } from 'react-router-dom';
 
-
 export const UserContext = React.createContext();
-
 export const UserStorage = ({children}) => {
+
+  const [modalVisible, setModalVisible] = useState(false)
+
+  const openModal = () => {
+    console.log('modalVisible openModal', modalVisible)
+    setModalVisible(!false)
+  }
+
+  // const closeModal = () => {
+  //   console.log('modalVisible closeModal', modalVisible)
+  //   setModalVisible(false)
+  // }
+
   const [data, setData] = useState(null);
   const [login, setLogin] = useState(null);
   const [ loading, setLoading] = useState(false);
@@ -66,16 +77,16 @@ export const UserStorage = ({children}) => {
           setLoading(false)
         }
       }
-      // else{
-      //   setLogin(false)
-      // }
+      else{
+        setLogin(false)
+      }
     }
 
     autoLogin();
   }, [userLogout])
 
 
-  return <UserContext.Provider value={{userLogin, data, userLogout, login, error, loading}}>
+  return <UserContext.Provider value={{userLogin, data, userLogout, login, error, loading, modalVisible, openModal}}>
         {children}
         </UserContext.Provider>
 }
