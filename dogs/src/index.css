@@ -82,11 +82,11 @@ ul,li,a{
 }
 
 .sair{
-  order: 3;
   border:none;
-  color:red;
   background-color: transparent;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width:768px){

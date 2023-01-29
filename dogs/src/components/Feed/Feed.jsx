@@ -1,10 +1,9 @@
-
 const Feed = () => {
-  return(
+  return (
     <div>
       <h2>Feed</h2>
     </div>
-  )
-}
+  );
+};
 
 export default Feed;

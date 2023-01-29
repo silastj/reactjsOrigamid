@@ -12,13 +12,13 @@ function App() {
     <div className='homeCenter'>
       <BrowserRouter>
         <UserStorage>
-          <Header/>
+          <Header />
           <Routes>
-            <Route path='/' element={<Home/>}/>
-            <Route path='/login/*' element={<Login/>}/>
-            <Route path='/conta/*' element={<ProtectRoute><LoginConta/></ProtectRoute>}/>
-          </Routes> 
-          <Footer/>
+            <Route path='/' element={<ProtectRoute><Home /></ProtectRoute>} />
+            <Route path='/login/*' element={<Login />} />
+            <Route path='/conta/*' element={<ProtectRoute><LoginConta /></ProtectRoute>} />
+          </Routes>
+          <Footer />
         </UserStorage>
       </BrowserRouter>
     </div>

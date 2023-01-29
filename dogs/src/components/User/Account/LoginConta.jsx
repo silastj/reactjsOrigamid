@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import LoginContaHeader from "./LoginContaHeader";
 import Feed from "../../Feed/Feed";
 import LoginPhotoPost from "./LoginPhotoPost";
-import LoginStats from "./LoginStats"
+import LoginStats from "./LoginStats";
 import { UserContext } from "../../../UserContext";
 import { Route, Routes } from "react-router-dom";
 
@@ -14,11 +14,11 @@ const LoginConta = () => {
     <div className={styles.account}>
       {data && (
         <div className={styles.acoountContainer}>
-          <LoginContaHeader/>
+          <LoginContaHeader />
           <Routes>
-            <Route path="/" element={<Feed/>} />
-            <Route path="/postar" element={<LoginPhotoPost/>} />
-            <Route path="/estatisticas" element={<LoginStats/>} />
+            <Route path="/" element={<Feed />} />
+            <Route path="/postar" element={<LoginPhotoPost />} />
+            <Route path="/estatisticas" element={<LoginStats />} />
           </Routes>
           <h2>
             Logado com a conta: <span>{data.nome}</span>

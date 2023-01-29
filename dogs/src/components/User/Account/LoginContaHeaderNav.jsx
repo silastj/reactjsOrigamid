@@ -1,19 +1,23 @@
-import { useContext } from "react"
-import { NavLink } from "react-router-dom"
-import { UserContext } from "../../../UserContext"
+import { useContext } from "react";
+import { NavLink } from "react-router-dom";
+import { UserContext } from "../../../UserContext";
+import styles from './login.module.css'
+import { ReactComponent as MinhasFotosSVG } from "../../../Assets/feed.svg";
+import { ReactComponent as EstatisticasSVG } from "../../../Assets/estatisticas.svg";
+import { ReactComponent as AdicionarFotoSVG } from "../../../Assets/adicionar.svg";
+import { ReactComponent as SairSVG } from "../../../Assets/sair.svg";
 
 const LoginContaHeaderNav = () => {
+  const { userLogout } = useContext(UserContext);
 
-  const {userLogout} = useContext(UserContext)
-
-  return(
-    <nav>
-      <NavLink to="/conta">Minha fotos</NavLink>
-      <NavLink to="/conta/estatisticas">Estatísticas</NavLink>
-      <NavLink to="/conta/postar">Adicionar Foto</NavLink>
-      <button onClick={() => userLogout()}>Sair</button>
+  return (
+    <nav className={styles.nav}>
+      <NavLink to="/conta" end><MinhasFotosSVG/>Minha fotos</NavLink>
+      <NavLink to="/conta/estatisticas"><EstatisticasSVG/>Estatísticas</NavLink>
+      <NavLink to="/conta/postar"><AdicionarFotoSVG/>Adicionar Foto</NavLink>
+      <button onClick={() => userLogout()} className="sair"><SairSVG/>Sair</button>
     </nav>
-  )
-}
+  );
+};
 
-export default LoginContaHeaderNav
+export default LoginContaHeaderNav;
