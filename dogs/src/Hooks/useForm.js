@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const types = {
   email: {
@@ -8,6 +8,10 @@ const types = {
   password:{
     regex: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/,
     message: 'A senha precisa ter no minimo 1 caracter - 1 Maiusculo - 1 minisculo e 8 caracteres.',
+  },
+  number:{
+    regex:/^\d+$/,
+    message:'Utilize números apenas .'
   }
 }
 const useForm = (type) => {

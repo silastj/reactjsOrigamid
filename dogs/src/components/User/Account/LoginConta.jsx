@@ -8,7 +8,6 @@ import { UserContext } from "../../../UserContext";
 import { Route, Routes } from "react-router-dom";
 
 const LoginConta = () => {
-  console.log("UserContext ", useContext(UserContext));
   const { data } = useContext(UserContext);
   return (
     <div className={styles.account}>

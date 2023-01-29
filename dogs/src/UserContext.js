@@ -5,18 +5,6 @@ import { useNavigate } from 'react-router-dom';
 export const UserContext = React.createContext();
 export const UserStorage = ({children}) => {
 
-  const [modalVisible, setModalVisible] = useState(false)
-
-  const openModal = () => {
-    console.log('modalVisible openModal', modalVisible)
-    setModalVisible(!false)
-  }
-
-  // const closeModal = () => {
-  //   console.log('modalVisible closeModal', modalVisible)
-  //   setModalVisible(false)
-  // }
-
   const [data, setData] = useState(null);
   const [login, setLogin] = useState(null);
   const [ loading, setLoading] = useState(false);
@@ -86,7 +74,7 @@ export const UserStorage = ({children}) => {
   }, [userLogout])
 
 
-  return <UserContext.Provider value={{userLogin, data, userLogout, login, error, loading, modalVisible, openModal}}>
+  return <UserContext.Provider value={{userLogin, data, userLogout, login, error, loading}}>
         {children}
         </UserContext.Provider>
 }

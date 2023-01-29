@@ -20,3 +20,30 @@
   font-size: 12px;
   color: rgb(134, 128, 128);
 }
+
+.photoPost{
+  width: 100%;
+}
+
+.photoPost form{
+  display: flex;
+  flex-direction: column;
+}
+
+.photoPost button,
+.photoPost input{
+  cursor: pointer;
+}
+
+.photoPost button{
+  margin-top: 10px;
+  padding: 5px 15px;
+  text-transform: uppercase;
+}
+
+.preview{
+  height: 200px;
+  background-repeat: no-repeat;
+  background-image: url(blob:http://localhost:3000/ac9327a5-7806-4adb-adff-ee4ee5f81ded);
+  background-size: contain;
+}
