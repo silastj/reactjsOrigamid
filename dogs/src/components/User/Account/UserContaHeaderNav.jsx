@@ -7,7 +7,7 @@ import { ReactComponent as EstatisticasSVG } from "../../../Assets/estatisticas.
 import { ReactComponent as AdicionarFotoSVG } from "../../../Assets/adicionar.svg";
 import { ReactComponent as SairSVG } from "../../../Assets/sair.svg";
 
-const LoginContaHeaderNav = () => {
+const UserContaHeaderNav = () => {
   const { userLogout } = useContext(UserContext);
 
   return (
@@ -20,4 +20,4 @@ const LoginContaHeaderNav = () => {
   );
 };
 
-export default LoginContaHeaderNav;
+export default UserContaHeaderNav;

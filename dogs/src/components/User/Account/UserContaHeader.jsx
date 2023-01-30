@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
-import LoginContaHeaderNav from "./LoginContaHeaderNav";
+import UserContaHeaderNav from "./UserContaHeaderNav";
+import styles from './account.module.css'
 
-const LoginContaHeader = () => {
+const UserContaHeader = () => {
 
   const [title, setTitle] = useState('')
   const location = useLocation()
@@ -12,25 +13,25 @@ const LoginContaHeader = () => {
     const {pathname} = location
     switch (pathname) {
       case '/conta/postar':
-        setTitle('Poste Sua Foto')
+        setTitle('Adicionar Foto')
         break;
       case '/conta/estatisticas':
         setTitle('Estatísticas')
         break;
     
       default:
-        setTitle('Minha Conta')
+        setTitle('Minhas Fotos')
         break;
     }
   },[location])
 
 
   return (
-    <header>
+    <header className={styles.header}>
       <h1 className="title">{title}</h1>
-      <LoginContaHeaderNav />
+      <UserContaHeaderNav />
     </header>
   );
 };
 
-export default LoginContaHeader;
+export default UserContaHeader;

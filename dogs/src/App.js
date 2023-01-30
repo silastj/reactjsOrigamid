@@ -3,7 +3,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Home from './components/Home';
 import Login from './components/Login';
-import LoginConta from './components/User/Account/LoginConta';
+import UserConta from './components/User/Account/UserConta';
 import { UserStorage } from './UserContext';
 import ProtectRoute from './ProtectRoute';
 
@@ -14,9 +14,9 @@ function App() {
         <UserStorage>
           <Header />
           <Routes>
-            <Route path='/' element={<ProtectRoute><Home /></ProtectRoute>} />
+            <Route path='/' element={<Home />} />
             <Route path='/login/*' element={<Login />} />
-            <Route path='/conta/*' element={<ProtectRoute><LoginConta /></ProtectRoute>} />
+            <Route path='/conta/*' element={<ProtectRoute><UserConta /></ProtectRoute>} />
           </Routes>
           <Footer />
         </UserStorage>

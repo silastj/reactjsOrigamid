@@ -1,10 +1,11 @@
 import styles from './home.module.css'
+import Feed from '../Feed/Feed'
 
 const Home = () => {
   return(
-    <div className={styles.home}>
-      <h1>Home</h1>
-    </div>
+    <section className={styles.home}>
+      <Feed/>
+    </section>
   )
 }
 

@@ -51,7 +51,7 @@ const LoginPhotoPost = () => {
         {loading ? <button disabled>Enviando</button> : <button>Enviar</button>}
         <Error error={error} />
       </form>
-      <div>
+      <div className={styles.containerPreview}>
         {img.preview && (
           <div
             className={styles.preview}

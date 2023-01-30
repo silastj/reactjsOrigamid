@@ -9,6 +9,19 @@
   flex-direction: column;
   align-items: center;
 }
+
+.account,
+.acoountContainer,
+.header{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header h1{
+  text-align: center;
+}
+
 .acoountContainer>h2>span,
 .acoountContainer>h3>span{
   text-transform: uppercase;

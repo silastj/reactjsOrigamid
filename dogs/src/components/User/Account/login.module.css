@@ -11,6 +11,9 @@
   flex-wrap: wrap;
   gap: 15px;
   margin-bottom: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 50px auto;
 }
 
 .nav>a{
@@ -23,6 +26,8 @@
 
 .photoPost{
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .photoPost form{
@@ -42,8 +47,13 @@
 }
 
 .preview{
+  width: 100%;
   height: 200px;
   background-repeat: no-repeat;
   background-image: url(blob:http://localhost:3000/ac9327a5-7806-4adb-adff-ee4ee5f81ded);
   background-size: contain;
+}
+
+.containerPreview{
+  width: 100%;
 }
