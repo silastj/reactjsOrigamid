@@ -4,9 +4,9 @@ import { useEffect } from "react";
 import { PHOTOS_GET } from "../service/api";
 import Error from "../Error/index";
 import Loading from "../Loading/Loading";
-import styles from './feed.module.css'
+import styles from "./feed.module.css";
 
-const FeedPhotos = () => {
+const FeedPhotos = ({setModalPhoto}) => {
   const { data, error, loading, request } = useFetch();
 
   useEffect(() => {
@@ -23,8 +23,17 @@ const FeedPhotos = () => {
   if (loading) return <Loading />;
   if (data)
     return (
-      <ul className={styles.listPhoto}>
-        {data.map(photo =>  <FeedPhotosItem key={photo.id} img={photo.src} title={photo.title} />)}
+      <ul className={styles.listPhoto} >
+        {data.map((photo) => (
+          <FeedPhotosItem
+            key={photo.id}
+            img={photo.src}
+            photo={photo}
+            title={photo.title}
+            acessos={photo.acessos}
+            setModalPhoto={setModalPhoto}
+          />
+        ))}
       </ul>
     );
   else return null;

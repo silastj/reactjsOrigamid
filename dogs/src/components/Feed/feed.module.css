@@ -13,7 +13,7 @@
   max-width: 280px;
   object-fit: contain;
   border: 0.5px solid #eee;
-  padding: 10px;
+  padding: 15px;
 }
 
 .photo p{
@@ -29,7 +29,19 @@
   background-color:red;
   padding: 5px 10px;
   color:#fff;
+}
 
+.photo span{
+  background-color: transparent;
+  color:rgb(167, 167, 167);
+  font-size: 8px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 7px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .listPhoto{
