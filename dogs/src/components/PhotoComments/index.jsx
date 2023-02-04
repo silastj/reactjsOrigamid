@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import {UserContext} from '../../UserContext'
+import PhotoCommentsForm from '../PhotoCommentsForm';
 
 // import { Container } from './styles';
 
-const PhotoComments = ({comments}) => {
+const PhotoComments = (props) => {
+const {login} = useContext(UserContext)
 
-  console.log('coments' , comments)
+  console.log('login' , login)
   return (
     <div>
-   
+      {login && <PhotoCommentsForm id={props.id}/>}   
     </div>
   )
 }

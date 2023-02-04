@@ -1,9 +1,11 @@
 import styles from "./photocontent.module.css";
 import { Link } from 'react-router-dom'
 import PhotoComments from "../PhotoComments";
+import { ReactComponent as Olho} from '../../Assets/visualizacao-black.svg'
 
 const PhotoContent = ({ data }) => {
   const { photo, comments } = data;
+  console.log('acessos ',photo)
 
   return (
     <div className={styles.PhotoContent}>
@@ -12,11 +14,11 @@ const PhotoContent = ({ data }) => {
       </div>
       <div className={styles.center}>
         <p className={styles.link}>
-          <Link to={`/perfil/${photo.author}`}>@{photo.autor}</Link>
-          <span className={styles.visualizacoes}>{photo.acessos}</span>
+          <Link to={`/perfil/${photo.author}`}>@{photo.author}</Link>
+          <span className={styles.visualizacoes}><Olho/> {photo.acessos}</span>
         </p>
         <h1 className="title">
-          <Link to={`/foto/${photo.id}`}>{photo.title}</Link>
+          <Link to={`/foto/${photo.id}`} className={styles.title}>{photo.title}</Link>
         </h1>
         <ul className={styles.attributes}>
           <li>{photo.peso}kg</li>

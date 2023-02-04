@@ -1,9 +1,10 @@
 import styles from './loading.module.css'
+import { ReactComponent as CarregandoSVG } from "../../Assets/carregando.svg";
 
 const Loading = () => {
   return (
     <div className={styles.Loading}>
-      <p>Carregando...</p>
+      <p><CarregandoSVG/></p>
     </div>
   )
 }
