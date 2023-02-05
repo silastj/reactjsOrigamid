@@ -25,6 +25,7 @@ const PhotoCommentsForm = ({ id, setComments}) => {
         <textarea
           value={comment}
           onChange={({ target }) => setComment(target.value)}
+          placeholder="Digite aqui seu comentário."
         ></textarea>
         <button>
           <Enviar />

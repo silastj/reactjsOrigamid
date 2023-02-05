@@ -1,6 +1,5 @@
 .comment{
-  border: 1px solid pink;
   height: 100%;
   max-height: 100px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }

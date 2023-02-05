@@ -1,3 +1,40 @@
+
 .PhotoCommentsForm{
-  border:1px solid green;
+  padding: 5px;
 }
+
+.PhotoCommentsForm textarea{
+  resize: none;
+  width: 100%;
+  display: block;
+  min-height: 50px;
+  margin: 10px auto;
+}
+
+.PhotoCommentsForm button{
+  width: 100%;
+  margin: 10px auto;
+  border: none;
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.PhotoCommentsForm button:focus svg path,
+.PhotoCommentsForm button:hover svg path{
+  fill: #fea;
+  stroke: #db1;
+}
+
+.PhotoCommentsForm button:hover svg g{
+  animation: latir .3s infinite;
+}
+
+@keyframes latir {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
