@@ -7,7 +7,8 @@
   background: rgba(0,0,0,0.4);
   display: flex;
   z-index: 9;
-  padding: 2rem calc(4rem + 15px) 2rem 4rem;
+  padding: 0rem calc(4rem + 15px) 2rem 4rem;
+  overflow-y: scroll;
 }
 
 @media(max-width:768px){
