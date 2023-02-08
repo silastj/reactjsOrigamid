@@ -5,6 +5,7 @@ import PhotoComments from "../PhotoComments";
 import { ReactComponent as Olho} from '../../Assets/visualizacao-black.svg'
 import { UserContext } from "../../UserContext";
 import PhotoDelete from "../PhotoDelete";
+import Image from "../Image";
 
 const PhotoContent = ({ data }) => {
   const user = useContext(UserContext)
@@ -13,7 +14,8 @@ const PhotoContent = ({ data }) => {
   return (
     <div className={styles.PhotoContent}>
       <div className={styles.img}>
-        <img src={photo.src} alt={photo.title} />
+        <Image src={photo.src} alt={photo.title}/>
+        {/* <img src={photo.src} alt={photo.title} /> */}
       </div>
       <div className={styles.center}>
         <p className={styles.link}>
