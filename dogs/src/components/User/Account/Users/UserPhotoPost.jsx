@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./login.module.css";
-import Input from "../../Input/index";
-import useForm from "../../../Hooks/useForm";
-import useFetch from "../../../Hooks/useFetch";
-import { PHOTO_POST } from "../../service/api";
-import Error from "../../Error";
+import Input from "../../../Input/index";
+import useForm from "../../../../Hooks/useForm";
+import useFetch from "../../../../Hooks/useFetch";
+import { PHOTO_POST } from "../../../service/api";
+import Error from "../../../Error";
 
 const LoginPhotoPost = () => {
   const nome = useForm();

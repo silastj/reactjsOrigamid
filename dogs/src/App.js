@@ -3,10 +3,12 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Home from './components/Home';
 import Login from './components/Login';
-import UserConta from './components/User/Account/UserConta';
+import UserConta from './components/User/Account/Users/UserConta';
 import { UserStorage } from './UserContext';
 import ProtectRoute from './ProtectRoute';
 import Photo from './components/Photo';
+import UserProfile from './components/User/Account/Users/UserProfile';
+import NotFound from './components/404';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
             <Route path='/login/*' element={<Login />} />
             <Route path='/conta/*' element={<ProtectRoute><UserConta /></ProtectRoute>} />
             <Route path='/foto/:id' element={<Photo/>} />
+            <Route path='/perfil/:user' element={<UserProfile/>} />
+            <Route path='*' element={<NotFound/>} />
           </Routes>
           <Footer />
         </UserStorage>

@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import { UserContext } from "../../../UserContext";
+import { UserContext } from "../../../../UserContext";
 import styles from './login.module.css'
-import { ReactComponent as MinhasFotosSVG } from "../../../Assets/feed.svg";
-import { ReactComponent as EstatisticasSVG } from "../../../Assets/estatisticas.svg";
-import { ReactComponent as AdicionarFotoSVG } from "../../../Assets/adicionar.svg";
-import { ReactComponent as SairSVG } from "../../../Assets/sair.svg";
+import { ReactComponent as MinhasFotosSVG } from "../../../../Assets/feed.svg";
+import { ReactComponent as EstatisticasSVG } from "../../../../Assets/estatisticas.svg";
+import { ReactComponent as AdicionarFotoSVG } from "../../../../Assets/adicionar.svg";
+import { ReactComponent as SairSVG } from "../../../../Assets/sair.svg";
 
 const UserContaHeaderNav = () => {
   const { userLogout } = useContext(UserContext);
