@@ -6,6 +6,7 @@ import LoginPasswordLost from "./LoginPasswordLost";
 import LoginPasswordReset from "./LoginPasswordReset";
 import { UserContext } from "../../UserContext";
 import NotFound from "../404";
+import Head from "../Head";
 
 const Login = () => {
   const { login } = useContext(UserContext);
@@ -13,6 +14,9 @@ const Login = () => {
   if (login === true) return <Navigate to="/conta" />;
   return (
     <section className="home">
+      <Head
+        title="Login"
+      />
       <div className="homeImagem" />
       <div className="homeData">
         <Routes>

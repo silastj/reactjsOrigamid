@@ -7,11 +7,15 @@ import UserStats from "./UserStats";
 import { UserContext } from "../../../../UserContext";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "../../../404";
+import Head from "../../../Head";
 
 const UserConta = () => {
   const { data } = useContext(UserContext);
   return (
     <div className={styles.account}>
+      <Head
+        title="Minha Conta"
+      />
       {data && (
         <div className={styles.acoountContainer}>
           <UserContaHeader />
@@ -21,12 +25,6 @@ const UserConta = () => {
             <Route path="/estatisticas" element={<UserStats />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-          <h2>
-            Logado com a conta: <span>{data.nome}</span>
-          </h2>
-          <h3>
-            Seu email: <span>{data.email}</span>
-          </h3>
         </div>
       )}
     </div>

@@ -74,4 +74,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### create project ###
 `` npx create-react-app nameprojeto ``
 `` npm install history react-router-dom ``
-
+### lib externa ###
+`npm install victory `

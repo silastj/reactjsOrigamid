@@ -6,6 +6,7 @@ import { USER_POST } from '../service/api'
 import { UserContext } from '../../UserContext';
 import useFetch from '../../Hooks/useFetch';
 import Error from '../Error';
+import Head from '../Head';
 
 const LoginCreate = () => {
 
@@ -15,57 +16,60 @@ const LoginCreate = () => {
   const password = useForm();
   const email = useForm('email');
 
- async function handleSubmit(e){
+  async function handleSubmit(e) {
     e.preventDefault();
-    const {url, options } = USER_POST({
+    const { url, options } = USER_POST({
       username: username.value,
       email: email.value,
       password: password.value,
     })
 
-    const {response} = await request(url, options)
-    if(response.ok) userLogin(username.value, password.value)
+    const { response } = await request(url, options)
+    if (response.ok) userLogin(username.value, password.value)
     console.log('enviou', response)
   }
 
-  return(
+  return (
     <section className='loginCreate animeLeft'>
+      <Head
+        title="Criar Conta"
+      />
       <p className='title'>Cadastra-se</p>
       <form action="" onSubmit={handleSubmit}>
-        <Input 
+        <Input
           type="text"
           placeholder='Digite aqui usuario'
           id="username"
           name="username"
           label="Usuario"
           {...username}
-           />
-        <Input 
+        />
+        <Input
           type="email"
           placeholder='Digite aqui seu email'
           id="email"
           name="email"
           label="E-mail"
           {...email}
-           />
-        <Input 
+        />
+        <Input
           type="password"
           placeholder='Digite aqui a sua senha'
           id="password"
           name="password"
           label="Senha"
           {...password}
-           />
-           {loading & loading ?
-            (
-             <Button>Cadastrando...</Button>
-            ):(
-              <Button>Cadastre-se</Button>
-            ) 
-           }
-           {error &&
-            <Error error={error} />
-           }
+        />
+        {loading & loading ?
+          (
+            <Button>Cadastrando...</Button>
+          ) : (
+            <Button>Cadastre-se</Button>
+          )
+        }
+        {error &&
+          <Error error={error} />
+        }
       </form>
     </section>
   )

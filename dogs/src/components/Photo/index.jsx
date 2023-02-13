@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useFetch from "../../Hooks/useFetch";
 import Error from "../Error";
+import Head from "../Head";
 import Loading from "../Loading/Loading";
 import PhotoContent from "../PhotoContent";
 import { PHOTO_GET } from "../service/api";
@@ -21,6 +22,9 @@ const Photo = () => {
   if (data)
     return (
       <div className={styles.Photo}>
+        <Head
+          title={data.photo.title}
+        />
         <PhotoContent data={data} />
       </div>
     );
