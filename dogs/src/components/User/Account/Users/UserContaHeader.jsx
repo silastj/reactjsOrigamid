@@ -28,7 +28,6 @@ const UserContaHeader = () => {
 
   return (
     <header className={styles.header}>
-      <h1 className="title">{title}</h1>
       <UserContaHeaderNav />
     </header>
   );

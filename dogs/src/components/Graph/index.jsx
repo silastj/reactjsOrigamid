@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import styles from './graph.module.css'
-import { VictoryPie, VictoryAxis, VictoryChart, VictoryArea, VictoryPolarAxis, VictoryBar } from 'victory'
+import { VictoryPie, VictoryAxis, VictoryChart, VictoryArea, VictoryPolarAxis } from 'victory'
 
 const Graph = ({ data }) => {
   const [graph, setGraph] = useState([])

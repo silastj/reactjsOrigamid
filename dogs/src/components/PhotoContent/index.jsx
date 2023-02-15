@@ -15,7 +15,6 @@ const PhotoContent = ({ data }) => {
     <div className={styles.PhotoContent}>
       <div className={styles.img}>
         <Image src={photo.src} alt={photo.title}/>
-        {/* <img src={photo.src} alt={photo.title} /> */}
       </div>
       <div className={styles.center}>
         <p className={styles.link}>
