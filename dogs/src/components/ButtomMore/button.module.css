@@ -1,0 +1,13 @@
+.buttonMore{
+  color: blue;
+  text-transform: lowercase;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: right;
+  width: 100%;
+}
+
+.erro{
+  color:red;
+}

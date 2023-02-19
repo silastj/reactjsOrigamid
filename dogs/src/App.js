@@ -10,6 +10,7 @@ import Photo from './components/Photo';
 import UserProfile from './components/User/Account/Users/UserProfile';
 import NotFound from './components/404';
 import Questions from './components/Questions/index';
+import Opinions from './components/Opinions/index';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path='/foto/:id' element={<Photo/>} />
             <Route path='/perfil/:user' element={<UserProfile/>} />
             <Route path='/perguntas' element={<Questions/>} />
+            <Route path='/opiniao' element={<Opinions/>} />
             <Route path='*' element={<NotFound/>} />
           </Routes>
           <Footer />
