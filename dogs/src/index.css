@@ -3,6 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body{
@@ -11,6 +12,7 @@ body{
   --font-first:Helvetica, Arial, sans-serif;
   --font-secont: 'Spectral', Georgia;
   font-family: var(--font-first);
+  scroll-behavior: smooth;
 }
 
 h1,h2,h3,h4,p{
@@ -95,6 +97,11 @@ ul,li,a{
   font-size: 12px;
 }
 
+.smoth{
+  scroll-behavior: smooth;
+  transition: all .05s ease-out;
+}
+
 @media (max-width:768px){
   .home{
     grid-template-columns: 1fr;
@@ -108,3 +115,4 @@ ul,li,a{
     padding: 20px 10px;
   }
 }
+

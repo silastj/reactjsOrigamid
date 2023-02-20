@@ -52,7 +52,7 @@ const Opinions = () => {
   return (
     <div className={styles.opinions}>
       <p><strong>Quantidade de letras:</strong>{letterTotal > 1 ? `${letterTotal} letras.` : `${letterTotal} letra.`} </p>
-      <p><strong>Comentarios: </strong>{letterTotal >= qtLetter ? comentario.substring(0, qtLetter) : comentario.substring(0, letterTotal)}</p>
+      <p class="smoth"><strong>Comentarios: </strong>{letterTotal >= qtLetter ? comentario.substring(0, qtLetter) : comentario.substring(0, letterTotal)}</p>
 
       {letterTotal >= 10 && qtLetter <= 10 ? (
         <ButtonMore
