@@ -4,3 +4,32 @@
   border-radius: 10px;
   background-color: #eee;
 }
+/* STAR START */
+.container {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.star {
+  width: 18px;
+  margin-right: 2px;
+  display: flex;
+  color: #f8d448;
+}
+.star:last-of-type {
+  margin-right: 0;
+}
+
+.overlay {
+  background-color: #eee;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  opacity: unset;
+  mix-blend-mode: color;
+}
+/* STAR END */
+ 
