@@ -6,9 +6,10 @@ import StarIcon from '../StarNew'
 import LikeOff from '../ButtomLike/assets/icons/likeOff.png'
 import LikeOn from '../ButtomLike/assets/icons/likeOn.png'
 
+const valueLike = 5
 const quantLike = 2
 const comments = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
-const percentage = 90
+const percentage = (valueLike * 10)
 
 const Opinions = () => {
   const [comentario, setComentario] = useState(comments)
