@@ -1,5 +1,6 @@
 import React from 'react'
 import { useData } from '../Context/DataContext'
+import {useNavigate } from 'react-router-dom'
 
 type IMesBtn = React.ComponentProps<'button'> & {
   n: number
@@ -22,8 +23,10 @@ function formatDate(date: Date){
 
 const MesBtn = ({n}: IMesBtn) => {
   const {setInicio, setFinal} = useData()
+  const navigate = useNavigate()
 
   function setMes(n:number) {
+    navigate('/vendas')
     const date = new Date()
     date.setMonth(date.getMonth() + n)
 
@@ -33,7 +36,7 @@ const MesBtn = ({n}: IMesBtn) => {
     setFinal(formatDate(lastDay))
   }  
   return(
-    <button value={n} onClick={() => setMes(n)}>{nomeMes(n)}</button>
+    <button value={n} onClick={() => setMes(n)} className="box bg-3">{nomeMes(n)}</button>
   )
 }
 

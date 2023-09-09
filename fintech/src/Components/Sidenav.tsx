@@ -1,11 +1,12 @@
 import React from 'react'
-import fintech from '../assets/fintech.svg'
 import resumo from '../assets/icons/resumo.svg'
 import vendas from '../assets/icons/vendas.svg'
 import webhooks from '../assets/icons/webhooks.svg'
 import configuracoes from '../assets/icons/configuracoes.svg'
 import contato from '../assets/icons/contato.svg'
 import sair from '../assets/icons/sair.svg'
+import FintechSVG from './FintechSVG'
+import {NavLink} from 'react-router-dom'
 
 const slideNavStyles: React.CSSProperties = {
   background: '#cecece',
@@ -30,19 +31,19 @@ const span: React.CSSProperties = {
 const SideNav = () => {
   return (
     <nav style={slideNavStyles}>
-      <img src={fintech} alt="Logo da Fintech" />
+      <FintechSVG title='fintech logo'/>
       <ul style={ul}>
         <li style={li}>
           <span>
             <img src={resumo} alt="Icone de Resumo" />
           </span>
-          <a href="">Resumo</a>
+          <NavLink to="/">Resumo</NavLink>
         </li>
         <li style={li}>
           <span>
             <img src={vendas} alt="Icone de Vendas" />
           </span>
-          <a href="">Vendas</a>
+          <NavLink to="/vendas">Vendas</NavLink>
         </li>
         <li style={li}>
           <span>

@@ -1,3 +1,5 @@
+import GraficosVenda from "../Components/GraficosVenda"
+import Loading from "../Components/Loading"
 import { useData } from "../Context/DataContext"
 
 const boxStyle: React.CSSProperties = {
@@ -13,8 +15,9 @@ const centerBox: React.CSSProperties = {
 }
 
 const Resumo = () => {
-  const {data} = useData()
+  const {data, loading} = useData()
   if(data === null) return null
+  if(loading || data === null || !data) return <Loading/>
 
   return (
     <section style={centerBox}>
@@ -45,6 +48,9 @@ const Resumo = () => {
           .reduce((acc, item) => acc + item.preco, 0)
           .toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}
         </span>
+      </div>
+      <div className="box mb">
+        <GraficosVenda data={data}/>
       </div>
     </section>
 

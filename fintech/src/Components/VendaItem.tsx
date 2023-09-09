@@ -1,4 +1,5 @@
 import { IVenda } from "../Context/DataContext"
+import {NavLink} from 'react-router-dom'
 
 const centerVendas: React.CSSProperties = {
   display:' flex',
@@ -11,7 +12,7 @@ const centerVendas: React.CSSProperties = {
 const VendaItem = ({venda}:{venda: IVenda}) => {
   return (
     <div style={centerVendas}>
-      <a href="">{venda.id}</a>
+      <NavLink to={`/vendas/${venda.id}`}>{venda.id}</NavLink>
       <p>{venda.nome}</p>
       <p>{venda.preco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</p>
     </div>
